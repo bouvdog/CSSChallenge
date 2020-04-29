@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a1fd0a95-3e21-43c6-aad8-d230084f494d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1b2lGAYljbu9P8WUPl5f7h7aYJQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37241378" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="kitchensim" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestKitchen.smokeTestForExecutor">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestKitchenActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSSChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kitchensim" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchenActor" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKitchenActor.testKitchenActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSSChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kitchensim" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchenActor" />
+      <option name="METHOD_NAME" value="testKitchenActor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKitchen.givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSSChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kitchensim" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
+      <option name="METHOD_NAME" value="givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKitchen.smokeTestForExecutor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSSChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kitchensim" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
+      <option name="METHOD_NAME" value="smokeTestForExecutor" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestKitchen.testPropertiesForCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CSSChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="kitchensim" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
+      <option name="METHOD_NAME" value="testPropertiesForCapacity" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestKitchen.smokeTestForExecutor" />
+        <item itemvalue="JUnit.TestKitchen.testPropertiesForCapacity" />
+        <item itemvalue="JUnit.TestKitchenActor.testKitchenActor" />
+        <item itemvalue="JUnit.TestKitchen.givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" />
+        <item itemvalue="JUnit.TestKitchenActor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1fd0a95-3e21-43c6-aad8-d230084f494d" name="Default Changelist" comment="" />
+      <created>1587837970222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587837970222</updated>
+      <workItem from="1587837973650" duration="81529000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="728" y="300" key="#Project_Structure" timestamp="1587990177570">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="728" y="300" key="#Project_Structure/0.0.2560.1440@0.0.2560.1440" timestamp="1587990177570" />
+    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser" timestamp="1588079916906">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1588079916906" />
+    <state x="589" y="534" width="406" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587945239919">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="589" y="534" width="406" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1440@0.0.2560.1440" timestamp="1587945239919" />
+    <state x="1229" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588026416744">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1229" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1588026416744" />
+    <state x="574" y="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588039014918">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="574" y="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1588039014918" />
+    <state x="1219" y="470" key="FileChooserDialogImpl" timestamp="1587838004179">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1219" y="470" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1587838004179" />
+    <state width="1415" height="382" key="GridCell.Tab.0.bottom" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1415" height="382" key="GridCell.Tab.0.center" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1415" height="382" key="GridCell.Tab.0.left" timestamp="1588116239709">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239709" />
+    <state width="1415" height="382" key="GridCell.Tab.0.right" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1415" height="382" key="GridCell.Tab.1.bottom" timestamp="1588116239711">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239711" />
+    <state width="1415" height="382" key="GridCell.Tab.1.center" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1415" height="382" key="GridCell.Tab.1.left" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1415" height="382" key="GridCell.Tab.1.right" timestamp="1588116239710">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1415" height="382" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state x="749" y="328" key="Maven.ArtifactSearchDialog" timestamp="1587917411774">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="749" y="328" key="Maven.ArtifactSearchDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1587917411774" />
+    <state x="940" y="358" key="SettingsEditor" timestamp="1588083638473">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="940" y="358" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1588083638473" />
+    <state width="630" height="500" key="javadoc.popup.new" timestamp="1588033524571">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="630" height="500" key="javadoc.popup.new/0.0.2560.1440@0.0.2560.1440" timestamp="1588033524571" />
+  </component>
+</project>
