@@ -31,12 +31,13 @@ public class OrderSourceJSON implements OrderSource {
         byte[] jsonOrders = Files.readAllBytes(Paths.get("orders.json"));
         ObjectMapper mapper = new ObjectMapper();
         orders = mapper.readValue(jsonOrders, Order[].class);
+        System.out.println("OrderSourceJSON: ***** " + orders.length + " orders in array *****");
     }
 
     @Override
     public Order getNextOrder() {
         Order o = orders[index++];
-        System.out.println("OrderSourceJSON: sending order " + o.getId() + " to Kitchen");
+        System.out.println("OrderSourceJSON: " + index +" sending order " + o.getId() + " to Kitchen");
         return o;
     }
 

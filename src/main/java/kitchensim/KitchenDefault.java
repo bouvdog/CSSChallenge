@@ -5,16 +5,21 @@ import java.util.*;
 import java.util.concurrent.*;
 
 /**
- * This class  is the central class in this system.
+ * This is the central class in this system.
  * It polls for orders from an order source
  * It places orders on the appropriate shelves
  * It spawns a Courier to pick up the order
  */
-public class KitchenDefault implements Kitchen {
+public class KitchenDefault implements Kitchen, Runnable {
 
     private static String OVERFLOW = "overFlow";
+    private int TEN_SECONDS = 10000;
 
     private OrderSource source;
+
+    // Default is twice a second.
+    // Expressed as milliseconds
+    private long orderRate = 500;
 
     private List<String> shelfTypes;
 
@@ -25,8 +30,10 @@ public class KitchenDefault implements Kitchen {
 
     private Map<String, Shelf> shelves = new HashMap<>();
 
+    private Map<String, Long> shelfLife = new HashMap<>();
+
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
-    private final ExecutorService courierLauncher = Executors.newFixedThreadPool(4);
+    private final ExecutorService courierLauncher = Executors.newFixedThreadPool(2);
 
     private static ScheduledFuture<?> scheduledFuture;
 
@@ -53,14 +60,17 @@ public class KitchenDefault implements Kitchen {
             oi = Kitchen.checkProperty("overFlowCapacity", prop);
             oi.ifPresent(value -> overFlowCapacity = value);
 
+            oi = Kitchen.checkProperty("ordersPerSecond", prop);
+            oi.ifPresent(value -> orderRate = 1000 / value);
+
             String HOT = "hot";
             String COLD = "cold";
             String FROZEN = "frozen";
             String OVERFLOW = "overflow";
-            shelves.put(HOT, new ShelfDefault(hotCapacity));
-            shelves.put(COLD, new ShelfDefault(coldCapacity));
-            shelves.put(FROZEN, new ShelfDefault(frozenCapacity));
-            shelves.put(OVERFLOW, new ShelfDefault(overFlowCapacity));
+            shelves.put(HOT, new ShelfDefault(hotCapacity,1));
+            shelves.put(COLD, new ShelfDefault(coldCapacity,1));
+            shelves.put(FROZEN, new ShelfDefault(frozenCapacity,1));
+            shelves.put(OVERFLOW, new ShelfDefault(overFlowCapacity,2));
 
             shelfTypes = new ArrayList<>();
             shelfTypes.add(HOT);
@@ -77,6 +87,7 @@ public class KitchenDefault implements Kitchen {
     // it was likely that the shelf logic would change, then the State pattern would make that easier and
     // would be justifed.
     public void putOrder(Order o) {
+        System.out.println("***** kitchen entering put order *****");
         Shelf shelf = shelves.get(o.getTemp());
         if (shelf.hasRoomForOrder()) {
             shelf.putOrder(o);
@@ -89,7 +100,9 @@ public class KitchenDefault implements Kitchen {
             }
         }
         System.out.println("Kitchen: put order: " + o.getId() + " on " + o.getTemp() + " shelf");
+        shelf.ageOrders(shelfLife);
         courierLauncher.submit(CourierDefault.create(this, o.getId(), o.getTemp()));
+        System.out.println("***** kitchen exiting put order *****");
     }
 
     // If the overflow shelf is full, an existing order of your choosing on the
@@ -141,21 +154,33 @@ public class KitchenDefault implements Kitchen {
     }
 
     @Override
+    public void run() {
+        startCooking();
+    }
+
+    @Override
     public void startCooking() {
         scheduledFuture =
                 scheduler
                         .scheduleAtFixedRate(() -> {
                                     Order o = source.getNextOrder();
                                     if (o == null) {
-                                        scheduledFuture.cancel(true);
-                                    } else {
+                                        // We have processed all orders, shut it down
+                                        // Wait ten seconds for any remaining couriers to pick up orders
+                                        try {
+                                            Thread.sleep(TEN_SECONDS);
+                                        } catch (InterruptedException ignored) {}
 
+                                        scheduledFuture.cancel(true);
+                                        scheduler.shutdownNow();
+                                        courierLauncher.shutdownNow();
+                                    } else {
                                         putOrder(o);
                                     }
                                 },
                                 2,
-                                2,
-                                TimeUnit.SECONDS
+                                orderRate,
+                                TimeUnit.MILLISECONDS
                         );
     }
 }

@@ -20,7 +20,7 @@ public class TestShelfDefault {
         ObjectMapper mapper = new ObjectMapper();
         Order[] orders = mapper.readValue(jsonOrders, Order[].class);
 
-        Shelf shelf = new ShelfDefault(10);
+        Shelf shelf = new ShelfDefault(10,1);
         for (int i = 0; i < 10; i++ ) {
             shelf.putOrder(orders[i]);
         }

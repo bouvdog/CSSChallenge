@@ -30,16 +30,18 @@ public class CourierDefault implements Courier, Runnable {
 
     @Override
     public void fetchOrder() {
+        System.out.println("***** Courier: entering fetch order");
         try {
             // Wait two to six seconds before fetching order
             int randomNum = ThreadLocalRandom.current().nextInt(2, 6 + 1);
             Thread.sleep(randomNum * 1000);
             Order o = kitchen.getOrder(orderId, shelf);
-            System.out.print("Courier: " + Thread.currentThread().getId()
+            System.out.println("Courier: " + Thread.currentThread().getId()
                     + " Order id: " + orderId + orderStatus(o));
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
+        System.out.println("***** Courier: exiting fetch order");
     }
 
     private String orderStatus(Order o) {

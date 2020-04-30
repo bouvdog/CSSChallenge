@@ -1,8 +1,17 @@
 package kitchensim;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.OptionalInt;
 import java.util.Properties;
 
+/**
+ * This is the central class in this system.
+ * It polls for orders from an order source
+ * It places orders on the appropriate shelves
+ * It spawns a Courier to pick up the order
+ */
 public interface Kitchen {
 
     /**
@@ -10,27 +19,28 @@ public interface Kitchen {
      * the order has decayed or been discarded. This method is intended for use by the Couriers, which 'pick up'
      * the order and thereby remove it from the system.
      *
-     * @param orderId
-     * @param tempShelf
+     * @param orderId       used as a key to find the desired order
+     * @param tempShelf     used optimize the search for the order
+     * @return              the sought for order or null
      */
-    Order getOrder(String orderId, String tempShelf);
+    @Nullable Order getOrder(@NotNull String orderId, @NotNull String tempShelf);
 
     /**
-     * This method kicks off the process. It runs until the order component is out of orders
+     * This method starts the system. It runs until the order component is out of orders
      */
     void startCooking();
 
 
     /**
-     * This method checks that the values in the properties object are valid. These values are overrides
-     * for defaults and defaults are used if the values in the properties file do not meet expectations.
+     * This method checks that the values in the properties object are valid.
+     * Defaults are used if the values in the properties file do not meet expectations.
      *
-     * @param property
-     * @param prop
-     * @return
+     * @param property      the property key to be checked
+     * @param prop          the property object
+     * @return              an optional that contains the parsed integer or null
      */
     // TODO: upper bound on capacity?
-    static OptionalInt checkProperty(String property, Properties prop) {
+    static OptionalInt checkProperty(@NotNull String property, @NotNull Properties prop) {
         int intValue = -1;
         try {
             String value = prop.getProperty(property);

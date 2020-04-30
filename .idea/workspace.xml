@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1fd0a95-3e21-43c6-aad8-d230084f494d" name="Default Changelist" comment="" />
+    <list default="true" id="a1fd0a95-3e21-43c6-aad8-d230084f494d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kitchensim/TestShelf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/kitchensim/TestSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge.properties" beforeDir="false" afterPath="$PROJECT_DIR$/challenge.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/CourierDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/CourierDefault.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/Kitchen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/Kitchen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/KitchenDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/KitchenDefault.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/OrderSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/OrderSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/OrderSourceJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/OrderSourceJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/Shelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/Shelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kitchensim/ShelfDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kitchensim/ShelfDefault.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kitchensim/TestShelfDefault.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kitchensim/TestShelfDefault.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/CourierDefault.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/CourierDefault.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/Kitchen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/Kitchen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/KitchenDefault.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/KitchenDefault.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/OrderSourceJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/OrderSourceJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/Shelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/Shelf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/kitchensim/ShelfDefault.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/kitchensim/ShelfDefault.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/kitchensim/TestKitchen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/kitchensim/TestKitchen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/kitchensim/TestShelfDefault.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/kitchensim/TestShelfDefault.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,13 +34,20 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="316" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Kotlin File" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -29,6 +60,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1b2lGAYljbu9P8WUPl5f7h7aYJQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -36,14 +68,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scratch" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37241378" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -51,7 +85,58 @@
       <recent name="kitchensim" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestKitchen.smokeTestForExecutor">
+  <component name="RunManager" selected="Application.ACloudKitchen">
+    <configuration name="ACloudKitchen" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kitchensim.ACloudKitchen" />
+      <module name="CSSChallenge" />
+      <extension name="coverage" sample_coverage="false">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.ACloudKitchen" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.CourierDefault" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.KitchenDefault" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.Order" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.OrderSourceJSON" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="kitchensim.ShelfDefault" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestSystem" />
+      <module name="CSSChallenge" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kitchensim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -77,7 +162,7 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="TestKitchenActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestKitchen" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CSSChallenge" />
       <extension name="coverage">
         <pattern>
@@ -86,14 +171,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kitchensim" />
-      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchenActor" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKitchenActor.testKitchenActor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestShelf.testShelfLife" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CSSChallenge" />
       <extension name="coverage">
         <pattern>
@@ -102,15 +187,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kitchensim" />
-      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchenActor" />
-      <option name="METHOD_NAME" value="testKitchenActor" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestShelf" />
+      <option name="METHOD_NAME" value="testShelfLife" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestKitchen.givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSystem.testSystem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CSSChallenge" />
       <extension name="coverage">
         <pattern>
@@ -119,42 +204,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kitchensim" />
-      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
-      <option name="METHOD_NAME" value="givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestKitchen.smokeTestForExecutor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CSSChallenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kitchensim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kitchensim" />
-      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
-      <option name="METHOD_NAME" value="smokeTestForExecutor" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestKitchen.testPropertiesForCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CSSChallenge" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kitchensim.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kitchensim" />
-      <option name="MAIN_CLASS_NAME" value="kitchensim.TestKitchen" />
-      <option name="METHOD_NAME" value="testPropertiesForCapacity" />
+      <option name="MAIN_CLASS_NAME" value="kitchensim.TestSystem" />
+      <option name="METHOD_NAME" value="testSystem" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -177,13 +228,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.ACloudKitchen" />
+      <item itemvalue="JUnit.TestKitchen" />
+      <item itemvalue="JUnit.TestSystem.testSystem" />
+      <item itemvalue="Application.TestSystem" />
+      <item itemvalue="JUnit.TestShelf.testShelfLife" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestKitchen.smokeTestForExecutor" />
-        <item itemvalue="JUnit.TestKitchen.testPropertiesForCapacity" />
-        <item itemvalue="JUnit.TestKitchenActor.testKitchenActor" />
-        <item itemvalue="JUnit.TestKitchen.givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow" />
-        <item itemvalue="JUnit.TestKitchenActor" />
+        <item itemvalue="Application.ACloudKitchen" />
+        <item itemvalue="JUnit.TestSystem.testSystem" />
+        <item itemvalue="JUnit.TestShelf.testShelfLife" />
+        <item itemvalue="Application.TestSystem" />
+        <item itemvalue="JUnit.TestKitchen" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587837970222</updated>
-      <workItem from="1587837973650" duration="81529000" />
+      <workItem from="1587837973650" duration="100555000" />
     </task>
     <servers />
   </component>
@@ -209,10 +267,18 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="728" y="300" key="#Project_Structure/0.0.2560.1440@0.0.2560.1440" timestamp="1587990177570" />
-    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser" timestamp="1588079916906">
+    <state x="1395" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588195922244">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1588079916906" />
+    <state x="1395" y="378" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1588195922244" />
+    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser" timestamp="1588206729259">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="910" y="509" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1440@0.0.2560.1440" timestamp="1588206729259" />
+    <state x="1670" y="507" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588195916601">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1670" y="507" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1588195916601" />
     <state x="589" y="534" width="406" height="289" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587945239919">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
@@ -225,53 +291,126 @@
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="574" y="495" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1588039014918" />
-    <state x="1219" y="470" key="FileChooserDialogImpl" timestamp="1587838004179">
+    <state x="1219" y="470" key="FileChooserDialogImpl" timestamp="1588174986965">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="1219" y="470" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1587838004179" />
-    <state width="1415" height="382" key="GridCell.Tab.0.bottom" timestamp="1588116239710">
+    <state x="1219" y="470" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1588174986965" />
+    <state width="1573" height="381" key="GridCell.Tab.0.bottom" timestamp="1588211726106">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
-    <state width="1415" height="382" key="GridCell.Tab.0.center" timestamp="1588116239710">
+    <state width="1573" height="381" key="GridCell.Tab.0.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588211726106" />
+    <state width="1573" height="381" key="GridCell.Tab.0.center" timestamp="1588211726106">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
-    <state width="1415" height="382" key="GridCell.Tab.0.left" timestamp="1588116239709">
+    <state width="1573" height="381" key="GridCell.Tab.0.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588211726106" />
+    <state width="1573" height="381" key="GridCell.Tab.0.left" timestamp="1588211726106">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239709" />
-    <state width="1415" height="382" key="GridCell.Tab.0.right" timestamp="1588116239710">
+    <state width="1573" height="381" key="GridCell.Tab.0.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588211726106" />
+    <state width="1573" height="381" key="GridCell.Tab.0.right" timestamp="1588211726106">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
-    <state width="1415" height="382" key="GridCell.Tab.1.bottom" timestamp="1588116239711">
+    <state width="1573" height="381" key="GridCell.Tab.0.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588211726106" />
+    <state width="1573" height="381" key="GridCell.Tab.1.bottom" timestamp="1588211732977">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239711" />
-    <state width="1415" height="382" key="GridCell.Tab.1.center" timestamp="1588116239710">
+    <state width="1573" height="381" key="GridCell.Tab.1.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588211732977" />
+    <state width="1573" height="381" key="GridCell.Tab.1.center" timestamp="1588211732977">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
-    <state width="1415" height="382" key="GridCell.Tab.1.left" timestamp="1588116239710">
+    <state width="1573" height="381" key="GridCell.Tab.1.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588211732977" />
+    <state width="1573" height="381" key="GridCell.Tab.1.left" timestamp="1588211732976">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
-    <state width="1415" height="382" key="GridCell.Tab.1.right" timestamp="1588116239710">
+    <state width="1573" height="381" key="GridCell.Tab.1.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588211732976" />
+    <state width="1573" height="381" key="GridCell.Tab.1.right" timestamp="1588211732977">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state width="1415" height="382" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588116239710" />
+    <state width="1573" height="381" key="GridCell.Tab.1.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588211732977" />
+    <state width="1573" height="381" key="GridCell.Tab.2.bottom" timestamp="1588211725918">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.2.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588211725918" />
+    <state width="1573" height="381" key="GridCell.Tab.2.center" timestamp="1588211725917">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.2.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588211725917" />
+    <state width="1573" height="381" key="GridCell.Tab.2.left" timestamp="1588211725917">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.2.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588211725917" />
+    <state width="1573" height="381" key="GridCell.Tab.2.right" timestamp="1588211725917">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.2.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588211725917" />
+    <state width="1573" height="381" key="GridCell.Tab.3.bottom" timestamp="1588211704769">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.3.bottom/0.0.2560.1440@0.0.2560.1440" timestamp="1588211704769" />
+    <state width="1573" height="381" key="GridCell.Tab.3.center" timestamp="1588211704769">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.3.center/0.0.2560.1440@0.0.2560.1440" timestamp="1588211704769" />
+    <state width="1573" height="381" key="GridCell.Tab.3.left" timestamp="1588211704769">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.3.left/0.0.2560.1440@0.0.2560.1440" timestamp="1588211704769" />
+    <state width="1573" height="381" key="GridCell.Tab.3.right" timestamp="1588211704769">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state width="1573" height="381" key="GridCell.Tab.3.right/0.0.2560.1440@0.0.2560.1440" timestamp="1588211704769" />
     <state x="749" y="328" key="Maven.ArtifactSearchDialog" timestamp="1587917411774">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="749" y="328" key="Maven.ArtifactSearchDialog/0.0.2560.1440@0.0.2560.1440" timestamp="1587917411774" />
-    <state x="940" y="358" key="SettingsEditor" timestamp="1588083638473">
+    <state x="1283" y="367" key="SettingsEditor" timestamp="1588195719321">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
-    <state x="940" y="358" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1588083638473" />
+    <state x="1283" y="367" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" timestamp="1588195719321" />
+    <state x="279" y="542" width="876" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1588211789375">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="279" y="542" width="876" height="689" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.2560.1440@0.0.2560.1440" timestamp="1588211789375" />
     <state width="630" height="500" key="javadoc.popup.new" timestamp="1588033524571">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="630" height="500" key="javadoc.popup.new/0.0.2560.1440@0.0.2560.1440" timestamp="1588033524571" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kitchensim/KitchenDefault.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CSSChallenge$ACloudKitchen.ic" NAME="ACloudKitchen Coverage Results" MODIFIED="1588195926573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>kitchensim.*</FILTER>
+      <FILTER>kitchensim.ACloudKitchen</FILTER>
+      <FILTER>kitchensim.CourierDefault</FILTER>
+      <FILTER>kitchensim.KitchenDefault</FILTER>
+      <FILTER>kitchensim.Order</FILTER>
+      <FILTER>kitchensim.OrderSourceJSON</FILTER>
+      <FILTER>kitchensim.ShelfDefault</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSSChallenge$TestKitchen_testPropertiesForCapacity.ic" NAME="TestKitchen.testPropertiesForCapacity Coverage Results" MODIFIED="1588192593998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kitchensim.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSSChallenge$TestKitchen_givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow.ic" NAME="TestKitchen.givenFullShelf_whenNewOrderArrives_thenPutNewOrderOnOverflow Coverage Results" MODIFIED="1588192688476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kitchensim.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSSChallenge$TestSystem_testSystem.ic" NAME="TestSystem.testSystem Coverage Results" MODIFIED="1588198825510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kitchensim.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSSChallenge$TestKitchen.ic" NAME="TestKitchen Coverage Results" MODIFIED="1588192720700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kitchensim.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CSSChallenge$TestSystem.ic" NAME="TestSystem Coverage Results" MODIFIED="1588197489591" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kitchensim.*</FILTER>
+    </SUITE>
   </component>
 </project>
