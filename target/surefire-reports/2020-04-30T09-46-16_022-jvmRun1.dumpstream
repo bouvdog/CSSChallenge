@@ -1,0 +1,3 @@
+# Created at 2020-04-30T09:46:17.089
+java.lang.ClassNotFoundException: org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+

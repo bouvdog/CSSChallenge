@@ -8,7 +8,7 @@ import java.util.Properties;
 
 /**
  * This is the central class in this system.
- * It polls for orders from an order source
+ * It receives orders from the order source
  * It places orders on the appropriate shelves
  * It spawns a Courier to pick up the order
  */
@@ -20,10 +20,10 @@ public interface Kitchen {
      * the order and thereby remove it from the system.
      *
      * @param orderId       used as a key to find the desired order
-     * @param tempShelf     used optimize the search for the order
+     * @param type          used optimize the search for the order
      * @return              the sought for order or null
      */
-    @Nullable Order getOrder(@NotNull String orderId, @NotNull String tempShelf);
+    @Nullable Order getOrder(@NotNull String orderId, @NotNull ShelfDefault.ShelfType type);
 
     /**
      * This method starts the system. It runs until the order component is out of orders

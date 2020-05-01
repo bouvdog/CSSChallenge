@@ -1,8 +1,12 @@
 package kitchensim;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.FileInputStream;
 import java.util.*;
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * This is the central class in this system.
@@ -12,42 +16,28 @@ import java.util.concurrent.*;
  */
 public class KitchenDefault implements Kitchen, Runnable {
 
-    private static String OVERFLOW = "overFlow";
-    private int TEN_SECONDS = 10000;
-
-    private OrderSource source;
-
-    // Default is twice a second.
-    // Expressed as milliseconds
-    private long orderRate = 500;
-
-    private List<String> shelfTypes;
-
     private int hotCapacity = 10;
     private int coldCapacity = 10;
     private int frozenCapacity = 10;
     private int overFlowCapacity = 15;
 
-    private Map<String, Shelf> shelves = new HashMap<>();
+    private Map<ShelfDefault.ShelfType, Shelf> shelves = new HashMap<>();
 
-    private Map<String, Long> shelfLife = new HashMap<>();
+    private BlockingQueue<Order> queue;
 
-    private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private final ExecutorService courierLauncher = Executors.newFixedThreadPool(2);
 
-    private static ScheduledFuture<?> scheduledFuture;
-
-    public static KitchenDefault create(OrderSource source) {
+    public static KitchenDefault create(BlockingQueue<Order> queue) {
         System.out.println("Kitchen: Started");
-        return new KitchenDefault(source);
+        return new KitchenDefault(queue);
     }
 
-    private KitchenDefault(OrderSource source) {
-        this.source = source;
+    private KitchenDefault(BlockingQueue<Order> queue) {
+        this.queue = queue;
         Properties prop = new Properties();
 
         try {
-            prop.load(new FileInputStream("challenge.properties"));
+            prop.load(new FileInputStream("./challenge.properties"));
             OptionalInt oi = Kitchen.checkProperty("hotCapacity", prop);
             oi.ifPresent(value -> hotCapacity = value);
 
@@ -60,22 +50,12 @@ public class KitchenDefault implements Kitchen, Runnable {
             oi = Kitchen.checkProperty("overFlowCapacity", prop);
             oi.ifPresent(value -> overFlowCapacity = value);
 
-            oi = Kitchen.checkProperty("ordersPerSecond", prop);
-            oi.ifPresent(value -> orderRate = 1000 / value);
-
-            String HOT = "hot";
-            String COLD = "cold";
-            String FROZEN = "frozen";
-            String OVERFLOW = "overflow";
-            shelves.put(HOT, new ShelfDefault(hotCapacity,1));
-            shelves.put(COLD, new ShelfDefault(coldCapacity,1));
-            shelves.put(FROZEN, new ShelfDefault(frozenCapacity,1));
-            shelves.put(OVERFLOW, new ShelfDefault(overFlowCapacity,2));
-
-            shelfTypes = new ArrayList<>();
-            shelfTypes.add(HOT);
-            shelfTypes.add(COLD);
-            shelfTypes.add(FROZEN);
+            shelves.put(ShelfDefault.ShelfType.HOT, new ShelfDefault(hotCapacity, ShelfDefault.ShelfType.HOT));
+            shelves.put(ShelfDefault.ShelfType.COLD, new ShelfDefault(coldCapacity, ShelfDefault.ShelfType.COLD));
+            shelves.put(ShelfDefault.ShelfType.FROZEN,
+                    new ShelfDefault(frozenCapacity, ShelfDefault.ShelfType.FROZEN));
+            shelves.put(ShelfDefault.ShelfType.OVERFLOW,
+                    new ShelfDefault(overFlowCapacity, ShelfDefault.ShelfType.OVERFLOW));
 
         } catch (Exception e) {
             System.out.println("Could not find or read properties file. Using defaults.");
@@ -87,37 +67,39 @@ public class KitchenDefault implements Kitchen, Runnable {
     // it was likely that the shelf logic would change, then the State pattern would make that easier and
     // would be justifed.
     public void putOrder(Order o) {
-        System.out.println("***** kitchen entering put order *****");
-        Shelf shelf = shelves.get(o.getTemp());
+        ShelfDefault.ShelfType type = ShelfDefault.ShelfType.valueOf(o.getTemp().toUpperCase());
+        Shelf shelf = shelves.get(type);
         if (shelf.hasRoomForOrder()) {
+            System.out.println("Kitchen: put order: " + o.getId() + " on " + type + " shelf");
             shelf.putOrder(o);
         } else {
-            shelf = shelves.get(OVERFLOW);
+            System.out.println("Kitchen: put order: " + o.getId() + " on OVERFLOW shelf");
+            shelf = shelves.get(ShelfDefault.ShelfType.OVERFLOW);
             if (shelf.hasRoomForOrder()) {
                 shelf.putOrder(o);
             } else {
                 findMoveableOrder(o);
             }
         }
-        System.out.println("Kitchen: put order: " + o.getId() + " on " + o.getTemp() + " shelf");
-        shelf.ageOrders(shelfLife);
-        courierLauncher.submit(CourierDefault.create(this, o.getId(), o.getTemp()));
-        System.out.println("***** kitchen exiting put order *****");
+        shelf.ageOrders();
+        courierLauncher.submit(CourierDefault.create(this, o.getId(),
+                ShelfDefault.ShelfType.valueOf(o.getTemp().toUpperCase())));
     }
 
     // If the overflow shelf is full, an existing order of your choosing on the
     // overflow should be moved to an allowable shelf with room. If no such move is possible, a random order
     // from the overflow shelf should be discarded as waste (and will not be available for a courier pickup).
     private void findMoveableOrder(Order toOverflowShelf) {
-        Shelf overflow = shelves.get(OVERFLOW);
+        Shelf overflow = shelves.get(ShelfDefault.ShelfType.OVERFLOW);
         boolean thereIsNoRoom = true;
-        for (String tempType : shelfTypes) {
-            Shelf shelf = shelves.get(tempType);
+        for (ShelfDefault.ShelfType type : ShelfDefault.ShelfType.values()) {
+            Shelf shelf = shelves.get(type);
             if (shelf.hasRoomForOrder()) {
-                Optional<Order> toBeMoved = overflow.returnOrderOfTempType(tempType);
+                Optional<Order> toBeMoved = overflow.returnOrderOfTempType(type.toString().toLowerCase());
                 toBeMoved.ifPresent(fromOverflowShelf -> shelf.putOrder(fromOverflowShelf));
                 overflow.putOrder(toOverflowShelf);
                 thereIsNoRoom = false;
+
                 Order o = toBeMoved.orElse(new Order());
                 System.out.println("Kitchen: moved order " + o.getId()
                         + " from Overflow to " + o.getTemp());
@@ -138,17 +120,13 @@ public class KitchenDefault implements Kitchen, Runnable {
 
     // check the appropriate shelf and possibly the overflow shelf for the order
     @Override
-    public synchronized Order getOrder(String orderId, String tempShelf) {
+    public synchronized Order getOrder(@NotNull String orderId, @NotNull ShelfDefault.ShelfType type) {
         Order o;
-        Shelf shelf = shelves.get(tempShelf);
+        Shelf shelf = shelves.get(type);
         o = shelf.pullOrder(orderId);
         if (orderNotOnShelf(o)) {
-            shelf = shelves.get(OVERFLOW);
+            shelf = shelves.get(ShelfDefault.ShelfType.OVERFLOW);
             o = shelf.pullOrder(orderId);
-            System.out.println("Kitchen: order " + o.getId() + " pulled from overflow shelf");
-        } else {
-            System.out.println("Kitchen: order " + o.getId() + " pulled from the "
-                    + o.getTemp() + " shelf");
         }
         return o;
     }
@@ -160,27 +138,18 @@ public class KitchenDefault implements Kitchen, Runnable {
 
     @Override
     public void startCooking() {
-        scheduledFuture =
-                scheduler
-                        .scheduleAtFixedRate(() -> {
-                                    Order o = source.getNextOrder();
-                                    if (o == null) {
-                                        // We have processed all orders, shut it down
-                                        // Wait ten seconds for any remaining couriers to pick up orders
-                                        try {
-                                            Thread.sleep(TEN_SECONDS);
-                                        } catch (InterruptedException ignored) {}
-
-                                        scheduledFuture.cancel(true);
-                                        scheduler.shutdownNow();
-                                        courierLauncher.shutdownNow();
-                                    } else {
-                                        putOrder(o);
-                                    }
-                                },
-                                2,
-                                orderRate,
-                                TimeUnit.MILLISECONDS
-                        );
+        try {
+            Order o;
+            while (true) {
+                o = queue.take();
+                if (o.getId().equals("done")) {
+                    break;
+                }
+                putOrder(o);
+            }
+        } catch (InterruptedException ignored) {
+        }
+        courierLauncher.shutdown();
+        System.out.println("Kitchen: done cooking");
     }
 }

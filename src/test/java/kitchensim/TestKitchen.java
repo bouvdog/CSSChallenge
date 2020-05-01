@@ -29,23 +29,4 @@ public class TestKitchen {
         opt = Kitchen.checkProperty("cold", props);
         assertTrue(opt.isEmpty());
     }
-
-    @Test
-    public void smokeTestForExecutor() throws Exception {
-        OrderSource source = OrderSourceJSON.create();
-        Order o1 = source.getNextOrder();
-
-        Kitchen kitchen = KitchenDefault.create(OrderSourceJSON.create());
-
-        Order thereYet = kitchen.getOrder(o1.getId(), o1.getTemp());
-        assertNull(thereYet);
-
-        kitchen.startCooking();
-
-        Thread.sleep(10000);
-        Order deliveredOrder = kitchen.getOrder(o1.getId(), o1.getTemp());
-        assertEquals("Banana Split", deliveredOrder.getName());
-    }
-
-
 }

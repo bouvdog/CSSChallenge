@@ -2,6 +2,9 @@ package kitchensim;
 
 /**
  * POJO that matches the JSON order data
+ *
+ * The field 'creationTimeStamp' isn't part of the JSON data. It is used to track shelf life after the
+ * order is prepared.
  */
 class Order {
     private String id;
@@ -9,6 +12,7 @@ class Order {
     private String temp;
     private int shelfLife;
     private float decayRate;
+    private long creationTimeStamp;
 
     public Order() {
     }
@@ -33,6 +37,8 @@ class Order {
         return decayRate;
     }
 
+    public long getCreationTime() { return creationTimeStamp; }
+
     public void setId(String id) {
         this.id = id;
     }
@@ -51,6 +57,10 @@ class Order {
 
     public void setDecayRate(float decayRate) {
         this.decayRate = decayRate;
+    }
+
+    public void setCreationTime(long value) {
+        creationTimeStamp = value;
     }
 
     @Override

@@ -3,7 +3,6 @@ package kitchensim;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Map;
 import java.util.Optional;
 
 /**
@@ -14,23 +13,22 @@ public interface Shelf {
 
     /**
      * Used by the Kitchen to put an order on the appropriate shelf
-     * @param order
+     *
+     * @param order a 'new' order from the kitchen
      */
     void putOrder(@NotNull Order order);
 
-
     /**
+     * Used by the Kitchen to take an order off a shelf
      *
-     * @param orderId   the key to find the order to pull off the shelf
-     * @return          the order that matches the key or null if the order decayed or was discarded
+     * @param orderId the key to find the order to pull off the shelf
+     * @return the order that matches the key or null if the order decayed or was discarded
      */
-    @Nullable  Order pullOrder(@NotNull String orderId);
-
-    // TODO:
-    void discardBadOrder(String orderId);
+    @Nullable Order pullOrder(@NotNull String orderId);
 
     /**
      * Kitchen uses this method to determine if a Shelf has room for the order
+     *
      * @return
      */
     boolean hasRoomForOrder();
@@ -38,9 +36,10 @@ public interface Shelf {
     /**
      * This method is used by the Kitchen to support the scenario when the appropriate temperature shelf is
      * full and when the overflow shelf is full (see specification).
-     * @param temp      the shelf's temperature
-     * @return          an Optional that will contain an order from 'that' shelf or null if the order
-     *                  couldn't be found.
+     *
+     * @param temp the shelf's temperature
+     * @return an Optional that will contain an order from 'that' shelf or null if the order
+     * couldn't be found.
      */
     Optional<Order> returnOrderOfTempType(@NotNull String temp);
 
@@ -53,8 +52,8 @@ public interface Shelf {
     /**
      * This method checks the shelf for orders that have exceeded their shelf life
      * It will remove orders that have decayed.
-     * @param shelfLife
      */
-    void ageOrders(Map<String, Long> shelfLife);
+    void ageOrders();
+
 
 }
