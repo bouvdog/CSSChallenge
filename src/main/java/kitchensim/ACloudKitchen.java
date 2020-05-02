@@ -16,7 +16,8 @@ public class ACloudKitchen {
         try {
             ExecutorService service = newFixedThreadPool(2);
             OrderSourceJSON source = OrderSourceJSON.create(queue);
-            KitchenDefault kitchen = KitchenDefault.create(queue);
+            ConcurrencyBehavior couriers = new Concurrent();
+            KitchenDefault kitchen = KitchenDefault.create(queue, couriers);
             service.submit(source);
             service.submit(kitchen);
             service.shutdown();

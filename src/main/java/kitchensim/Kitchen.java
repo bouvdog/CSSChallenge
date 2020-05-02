@@ -11,6 +11,9 @@ import java.util.Properties;
  * It receives orders from the order source
  * It places orders on the appropriate shelves
  * It spawns a Courier to pick up the order
+ *
+ * Note: that there are public methods in KitchenDefault that are not defined here. Only unit tests should use
+ * those methods.
  */
 public interface Kitchen {
 

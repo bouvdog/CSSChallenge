@@ -61,16 +61,16 @@ public class ShelfDefault implements Shelf {
 
     // Side-effect, removes order from shelf
     @Override
-    public Optional<Order> returnOrderOfTempType(@NotNull String temp) {
+    public Order returnOrderOfTempType(@NotNull String temp) {
         Collection<Order> onShelf = shelf.values();
         List<Order> result = onShelf.stream()
                 .filter(o -> o.getTemp().equals(temp))
                 .limit(2)
                 .collect(Collectors.toList());
         if (result.isEmpty()) {
-            return Optional.empty();
+            return null;
         } else {
-            return Optional.of(pullOrder(result.get(0).getId()));
+            return pullOrder(result.get(0).getId());
         }
     }
 

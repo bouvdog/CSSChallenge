@@ -41,7 +41,7 @@ public interface Shelf {
      * @return an Optional that will contain an order from 'that' shelf or null if the order
      * couldn't be found.
      */
-    Optional<Order> returnOrderOfTempType(@NotNull String temp);
+    Order returnOrderOfTempType(@NotNull String temp);
 
     /**
      * This method is used by the Kitchen to support the scenario hen the appropriate temperature shelf is

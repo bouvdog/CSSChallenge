@@ -15,4 +15,3 @@ Ensure that a copy of the orders.json file is in the Target folder.
 java -jar CSSChallenge-1.0-SNAPSHOT-jar-with-dependencies.jar kitchensim.ACloudKitchen.class
 
 ## Comments
-For someone that usually practices Test Driven Development, I didn't 

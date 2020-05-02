@@ -35,7 +35,7 @@ public class CourierDefault implements Courier, Runnable {
             int randomNum = ThreadLocalRandom.current().nextInt(2, 6 + 1);
             Thread.sleep(randomNum * 1000);
             Order o = kitchen.getOrder(orderId, shelf);
-            System.out.println("Courier: picked up order: " + orderId + orderStatus(o));
+            System.out.println("Courier: arrived for order: " + orderId + orderStatus(o));
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         }
@@ -43,9 +43,9 @@ public class CourierDefault implements Courier, Runnable {
 
     private String orderStatus(Order o) {
         if (o == null) {
-            return " was NOT picked up";
+            return " and it was NOT picked up (decayed or discarded)";
         } else {
-            return " was picked up ";
+            return " and was picked up ";
         }
     }
 

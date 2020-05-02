@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -59,8 +58,8 @@ public class TestShelf {
 
         // Shelf is now full
         assertFalse(shelf.hasRoomForOrder());
-        Optional<Order> oo  = shelf.returnOrderOfTempType("cold");
-        assertEquals("cold", oo.get().getTemp());
+        o  = shelf.returnOrderOfTempType("cold");
+        assertEquals("cold", o.getTemp());
 
         // Shelf has room for an order now
         assertTrue(shelf.hasRoomForOrder());
@@ -72,8 +71,8 @@ public class TestShelf {
 
         shelf = new ShelfDefault(1, ShelfDefault.ShelfType.COLD);
         shelf.putOrder(o);
-        oo = shelf.returnOrderOfTempType("cold");
-        assertTrue(oo.isEmpty());
+        o = shelf.returnOrderOfTempType("cold");
+        assertTrue(o == null);
     }
 
     @Test
